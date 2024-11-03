@@ -1,0 +1,27 @@
+
+/*Skills*/
+.skills_list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 5rem;
+}
+
+.skills_item{
+  transition: var(--transition-timing);
+  user-select: none;
+}
+.skills_title{
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.skills_years{
+  display: inline-block;
+  font-size: var(--font-size-15);
+  margin-top: 1rem;
+}
+
+.skills_item:hover{
+  text-shadow:0 0 2px var(--color-dark-purple);
+}
+/*End Skills*/

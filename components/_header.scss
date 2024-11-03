@@ -1,0 +1,129 @@
+
+.header {
+  position: relative;
+  padding: 2rem 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  position: sticky;
+  background-color:var(--color-background) ;
+
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  background-color: var(--color-background);
+}
+.navigation{
+  transition: var(--transition-timing);
+}
+
+.navigation_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation_link:link,
+.navigation_link:visited {
+  font-size: var(--font-size-15);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation_link:hover,
+.navigation_link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.container:has(.bio:target) .navigation_bio{
+  color: darkviolet;
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+.container:has(.skills:target) .navigation_skills{
+  color: darkviolet;
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+.container:has(.projects:target) .navigation_projects{
+  color: darkviolet;
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+.container:has(.clients:target) .navigation_clients{
+  color: darkviolet;
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+.container:has(.contact:target) .navigation_contact{
+  color: darkviolet;
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+/*burger menu*/
+.burger_menu_checkbox{
+  display: none;
+}
+/*End burger menu*/
+/*Toggle*/
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.toggle_title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-15);
+}
+
+.toggle_Checkbox {
+  display: none;
+}
+
+.toggle_label {
+  display: block;
+  position: relative;
+  /*if you  would make the child fixed or absolute*/
+  background-color: var(--color-black);
+  width: 4.5rem;
+  height: 2.2rem;
+  cursor: pointer;
+  /*show as clickable*/
+  padding: 0.3rem 0.4rem;
+  border-radius: 1.5rem;
+  transition: 0.3s;
+  /*checkbox move with animation .3s*/
+}
+
+.toggle_label::after {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: 0.3s;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+/*descendant Selector (+)->means the next element to toggle_checkbox*/
+.toggle_Checkbox:checked+.toggle_label {
+  background-color: var(--color-white);
+}
+
+.toggle_Checkbox:checked+.toggle_label::after {
+  transform: translateX(2.1rem);
+  background-color: var(--color-purple);
+}
+
+/*End toggle*/
+

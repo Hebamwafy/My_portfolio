@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Heba Mwafy</title>
+</head>
+
+<body>
+  <div class="container">
+    <video class="video_loop" autoplay loop muted>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+    <header class="header">
+      <label for="menu" class="burger_menu">
+        <div class="burger_menu_bar"></div>
+        <div class="burger_menu_bar"></div>
+        <div class="burger_menu_bar"></div>
+      </label>
+      <input id="menu" type="checkbox" class="burger_menu_checkbox" />
+      <nav class="navigation">
+        <ul class="navigation_list">
+          <li><a href="#bio" class="navigation_link navigation_bio">Bio</a></li>
+          <li><a href="#skills" class="navigation_link navigation_skills">Skills</a></li>
+          <li><a href="#projects" class="navigation_link navigation_projects">Projects</a></li>
+          <li><a href="#clients" class="navigation_link navigation_clients ">My clients</a></li>
+          <li><a href="#contact" class="navigation_link navigation_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="toggle">
+        <h3 class="toggle_title">Switch Theme</h3>
+        <input type="checkbox" name="toggle checkbox" class="toggle_Checkbox" id="toggle">
+        <label for="toggle" class="toggle_label"></label>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          //check which theme selected to save
+          const savedTheme = localStorage.getItem("theme");
+
+          //select checked if "dark theme" was selectedbefore reload 
+          if (savedTheme === "dark") {
+            document.getElementById("toggle").checked = true;
+          }
+        });
+
+        document.getElementById("toggle").addEventListener("change", function () {
+          if (this.checked) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      </script>
+    </header>
+
+    <section id="bio" class="bio section">
+      <div class="bio-data">
+        <h1 class="bio_heading">
+          Hi There,I’M A Passionate<br /> Software<br /> Engineer
+        </h1>
+        <p class="bio_objective">My name is <span class="bio_name">Heba Mwafy</span>,I publish my projects on my <a
+            href="https://github.com/Hebamwafy" class="bio_github">GitHub</a>,and you can also found me on
+          <a href="https://www.linkedin.com/in/heba-mwafy-647645250/" class="bio_linkedin">LinkedIn</a>.
+        </p>
+        <a href="#contact" class="bio_links say-hi-link">Say Hi</a>
+        <a href="/Resume.pdf" class="bio_links find-out-link">Download CV<span class="bio_arrow">↓</span></a>
+      </div>
+      <div class="bio_pic-content">
+        <img class="bio_pic" src="img/personal-pic.png" alt="image of Heba Mwafy">
+      </div>
+    </section>
+
+    <section id="skills" class="skills section section--with-bg">
+      <h2 class="h2-heading">SKILLS</h2>
+      <ul class="skills_list">
+        <li class="skills_item">
+          <h2 class="skills_title">HTML</h2>
+          <span class="skills_years">2 years</span>
+        </li>
+        <li class="skills_item">
+          <h2 class="skills_title">CSS</h2>
+          <span class="skills_years">2 years</span>
+        </li>
+        <li class="skills_item">
+          <h2 class="skills_title">PHP</h2>
+          <span class="skills_years">2 years</span>
+        </li>
+        <li class="skills_item">
+          <h2 class="skills_title">C++</h2>
+          <span class="skills_years">4 years</span>
+        </li>
+        <li class="skills_item">
+          <h2 class="skills_title">React</h2>
+          <span class="skills_years">0.5 years</span>
+        </li>
+        <li class="skills_item">
+          <h2 class="skills_title">Python</h2>
+          <span class="skills_years">1 years</span>
+        </li>
+      </ul>
+    </section>
+    <section id="projects" class="projects section">
+      <h2 class="h2-heading">MY FEATURED<br />PROJECTS</h2>
+      <div class="projects_main">
+        <img src="img/project-11.png" alt="BlazorApp" class="project-img">
+        <div class="projects_data">
+          <h3 class="h3-heading">simple Courses Community App</h3>
+          <p class="project-description"><strong>CoursesBlazorApp</strong> is a Blazor-driven web application designed
+            to streamline course and student management. It provides a user-friendly platform for managing course
+            details, handling student enrollments, and organizing educational content in one place. With an intuitive
+            interface, users can easily add, edit, or view course information and manage which students are enrolled in
+            each course. Blazor’s component-based architecture enables smooth, responsive navigation, giving users a
+            seamless experience as they work with the course data. Perfect for educational organizations,
+            CoursesBlazorApp is structured to simplify and optimize the enrollment process, highlighting your skills in
+            Blazor for creating dynamic, data-rich applications.</p>
+          <a href="https://github.com/Hebamwafy/CoursesBlazorApp" target="_blank" class="projects_links">Project
+            Repository</a>
+        </div>
+
+        <div class="projects_data">
+          <h3 class="h3-heading">Laragigs App</h3>
+          <p class="project-description"><strong>Laragigs</strong> is a user-centric web application designed to let
+            users connect, share, and manage job postings. Built with Laravel, PHP, and MySQL, this app offers a
+            seamless experience for users to register, log in, and start creating posts. Once logged in, users can
+            create job listings that are visible to the community, and they have the control to edit or delete only
+            their own posts—ensuring privacy and ownership. The app’s design prioritizes a secure and intuitive user
+            experience, handling permissions so that each user’s actions are limited to their content. This setup
+            reflects a well-rounded approach to managing dynamic content while protecting user data and
+            permissions.<strong>Laragigs</strong> showcases essential functionality for a social or job-sharing
+            platform, with robust database support and a clear focus on usability and security. </p>
+
+          <a href="https://github.com/Hebamwafy/Laragigs.laravel" target="_blank" class="projects_links">Project
+            Repository</a>
+        </div>
+        <img src="img/project-2.png" alt="laragigsApp" class="project-img">
+      </div>
+    </section>
+    <section id="clients" class="clients section section--with-bg">
+      <h2 class="h2-heading">WHAT MY<br />CLIENTS SAY</h2>
+      <div class="clients-opinions">
+        <div class="clients_wrapper">
+          <p class="clients_opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt mollitia
+            velit debitis veritatis vero fugit illo! Nam cumque odit alias quae unde ad quidem repellat aut, iusto
+            dolorem? Voluptatibus!</p>
+          <p class="clients_opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ea? Vero
+            perferendis tempora id itaque! Impedit, voluptate iure. Corrupti beatae tempore consequuntur explicabo. Id
+            in iure illum nihil facere eum!</p>
+          <p class="clients_opinion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum explicabo
+            dignissimos molestias soluta amet placeat consequatur quibusdam quia odit aspernatur. Voluptas tempore
+            distinctio iste aspernatur officia nostrum hic deleniti suscipit?</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact section">
+      <div>
+        <p class="contact_desc">Feel Free to reach out me any time.I prefer talk over email or LinkedIn , but it is up
+          to you 😊</p>
+        <a class="contact_email" href="mailto:mwafyheba@gmail.com">mwafyheba@gmail.com</a>
+        <div class="contact_socials">
+          <a href="https://github.com/Hebamwafy" class="contact_social">
+            <img class="social-icon" src="img/brand/github.svg" alt="github" />
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=100072750970638" class="contact_social">
+            <img class="social-icon" src="img/brand/facebook.svg" alt="facebook" />
+          </a>
+
+          <a href="https://www.linkedin.com/in/heba-mwafy-647645250/" class="contact_social">
+            <img class="social-icon" src="img/brand/LinkedIn.svg" alt="liknedin">
+          </a>
+        </div>
+      </div>
+      <div class="contact_formContact">
+        <h2 class="h2-heading">LET'S WORK <br /> TOGETHER!</h2>
+        <form action="results.html">
+          <div class="contact_inputs">
+            <input type="text" class="contact_input" placeholder="FullName" required />
+            <input type="tel" class="contact_input" placeholder="Phone No" pattern="[0-9]{11}" required />
+          </div>
+          <textarea class="contact_input contact_textarea" name="description" id="description" rows="1"
+            placeholder="Your Message" required></textarea>
+          <input class="contact_button" action="results.html" type="submit" value="send message" />
+        </form>
+      </div>
+    </section>
+    <footer class="footer">© 2024 by Heba Mwafy</footer>
+  </div>
+</body>
+
+</html>

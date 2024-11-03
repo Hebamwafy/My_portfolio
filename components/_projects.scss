@@ -1,0 +1,39 @@
+/*Projects*/
+.projects_main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 7.4rem;
+  row-gap: 7.5rem;
+}
+
+.project-img{
+  width: 110%;
+  height: auto;
+  margin-top: 3rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0);
+}
+.projects_data{
+  align-self: center;
+}
+.project-description{
+  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+}
+
+.projects_links{
+  color:var(--color-darker-blue);
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-medium);
+  margin-top: 1.3rem;
+}
+.projects_links::after{
+  content:"";
+  display:inline-block;
+  width:1.4rem;
+  height: 1.4rem;
+  background-image: url("img/external-icon.png"); 
+  background-size:contain;
+  /*contain->adjust pic to the parent*/
+  margin-left: 0.6rem;
+}
+/*End Projects*/

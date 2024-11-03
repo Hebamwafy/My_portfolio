@@ -1,0 +1,57 @@
+
+/*Contact*/
+.contact{
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 20rem;
+  align-items: center;
+}
+.contact_desc{
+  font-size: var(--font-size-20);
+  line-height: 1.9;
+}
+.contact_email{
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-bold);
+  margin: 2.5rem 0;
+
+}
+.contact_social{
+  transition: var(--transition-timing);
+}
+.contact_social:hover{
+  transform:scale(1.2);
+  /*to increase the size by 20% on hover*/
+}
+.social-icon{
+  width: 100%;
+  margin:3px ;
+  filter: brightness(0) saturate(100%);
+}
+
+.contact_inputs{
+  display: flex;
+  gap: 2.5rem;
+}
+.contact_input{
+  border: 0;
+  outline:0;
+  background: transparent;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  flex:1;
+  color: var(--color-text);
+}
+.contact_textarea{
+  width:100%;
+  margin-top:4rem;
+}
+.contact_button{
+  background-color: var(--color-link-bg);
+  color:var(--color-white);
+  padding:1rem 1.2rem;
+  font-weight: var(--font-weight-medium);
+  font-size:var(--font-size-20);
+  margin-top: 2.4rem;
+}
+
+
+/*End Contact*/

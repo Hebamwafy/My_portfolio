@@ -1,0 +1,20 @@
+/*Clients*/
+.clients_opinions{
+  grid-column: 1/-1;
+  line-height:1.7rem;
+}
+.clients_wrapper{
+  display: flex;
+  overflow-x: auto;
+  /*scroll into the wrapper not the whole page*/
+  scroll-snap-type: x mandatory;
+}
+.clients_opinion{
+  font-size: 30px;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  /*to make them wrapper must be out of the parent's size*/
+  scroll-snap-align: start;
+  margin-bottom: 5rem;
+}
+/*End Clients*/

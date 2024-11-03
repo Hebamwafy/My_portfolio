@@ -1,0 +1,92 @@
+/*Bio*/
+.bio {
+  column-gap: 6.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bio_heading {
+  font-size:65px;
+  font-weight: var(--font-weight-bold);
+}
+
+.bio_objective {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-20);
+  margin: 3rem 0 8rem;
+}
+
+.bio_name {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.bio_github {
+  color: var(--color-dark-green);
+}
+
+.bio_linkedin {
+  color: #0E76A8;
+}
+
+.bio_links {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.say-hi-link {
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+  padding: 0.7rem 4.2rem;
+}
+
+.find-out-link {
+  padding: 0.7rem 0;
+  margin-inline-start: 1.4rem;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0.5rem);
+  }
+
+  35% {
+    transform: translateY(-0.5rem);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bio_arrow {
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+   /*infinte for make the inmation forevr , alternatemake the move from uo to down and the opposite , for more smooth animation make (ease-in-out)*/
+}
+.bio_pic-content{
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  /*to start from end*/
+  justify-self: end;
+}
+.bio_pic-content::before{
+  content:"";
+  position: absolute;
+  background-color: var(--color-box-img);
+  width: 27rem;
+  height: 29rem;
+  border-radius: 1.8rem;
+  z-index: -1;
+  
+}
+.bio_pic{
+  width: 25.7rem;
+  border-radius: 1.8rem;
+}
+/*End Bio*/
